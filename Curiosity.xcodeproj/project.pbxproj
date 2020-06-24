@@ -9,12 +9,19 @@
 /* Begin PBXBuildFile section */
 		FF801D1324A393A800CAC60D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF801D1224A393A800CAC60D /* AppDelegate.swift */; };
 		FF801D1524A393A800CAC60D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF801D1424A393A800CAC60D /* SceneDelegate.swift */; };
-		FF801D1724A393A800CAC60D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF801D1624A393A800CAC60D /* ViewController.swift */; };
 		FF801D1A24A393A800CAC60D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF801D1824A393A800CAC60D /* Main.storyboard */; };
 		FF801D1C24A393A900CAC60D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF801D1B24A393A900CAC60D /* Assets.xcassets */; };
 		FF801D1F24A393A900CAC60D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF801D1D24A393A900CAC60D /* LaunchScreen.storyboard */; };
 		FF801D2A24A393A900CAC60D /* CuriosityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF801D2924A393A900CAC60D /* CuriosityTests.swift */; };
 		FF801D3524A393A900CAC60D /* CuriosityUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF801D3424A393A900CAC60D /* CuriosityUITests.swift */; };
+		FF801D4324A393ED00CAC60D /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF801D4224A393ED00CAC60D /* RegisterViewController.swift */; };
+		FF801D4524A393F900CAC60D /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF801D4424A393F900CAC60D /* LogInViewController.swift */; };
+		FF801D4724A3944400CAC60D /* QuestionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF801D4624A3944400CAC60D /* QuestionsTableViewController.swift */; };
+		FF801D4924A3947900CAC60D /* MyQuestionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF801D4824A3947900CAC60D /* MyQuestionsTableViewController.swift */; };
+		FF801D4B24A394B000CAC60D /* CategorySpecificTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF801D4A24A394B000CAC60D /* CategorySpecificTableViewController.swift */; };
+		FF801D5124A394F000CAC60D /* CreateQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF801D5024A394F000CAC60D /* CreateQuestionViewController.swift */; };
+		FF801D5324A3950500CAC60D /* AnswerQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF801D5224A3950500CAC60D /* AnswerQuestionViewController.swift */; };
+		FF801D5624A3954E00CAC60D /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF801D5524A3954E00CAC60D /* HomeScreenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +45,6 @@
 		FF801D0F24A393A800CAC60D /* Curiosity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Curiosity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF801D1224A393A800CAC60D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF801D1424A393A800CAC60D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FF801D1624A393A800CAC60D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FF801D1924A393A800CAC60D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FF801D1B24A393A900CAC60D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FF801D1E24A393A900CAC60D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +55,14 @@
 		FF801D3024A393A900CAC60D /* CuriosityUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CuriosityUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF801D3424A393A900CAC60D /* CuriosityUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuriosityUITests.swift; sourceTree = "<group>"; };
 		FF801D3624A393A900CAC60D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF801D4224A393ED00CAC60D /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		FF801D4424A393F900CAC60D /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		FF801D4624A3944400CAC60D /* QuestionsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsTableViewController.swift; sourceTree = "<group>"; };
+		FF801D4824A3947900CAC60D /* MyQuestionsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyQuestionsTableViewController.swift; sourceTree = "<group>"; };
+		FF801D4A24A394B000CAC60D /* CategorySpecificTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySpecificTableViewController.swift; sourceTree = "<group>"; };
+		FF801D5024A394F000CAC60D /* CreateQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateQuestionViewController.swift; sourceTree = "<group>"; };
+		FF801D5224A3950500CAC60D /* AnswerQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerQuestionViewController.swift; sourceTree = "<group>"; };
+		FF801D5524A3954E00CAC60D /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +115,7 @@
 			children = (
 				FF801D1224A393A800CAC60D /* AppDelegate.swift */,
 				FF801D1424A393A800CAC60D /* SceneDelegate.swift */,
-				FF801D1624A393A800CAC60D /* ViewController.swift */,
+				FF801D5424A3952000CAC60D /* Controllers */,
 				FF801D1824A393A800CAC60D /* Main.storyboard */,
 				FF801D1B24A393A900CAC60D /* Assets.xcassets */,
 				FF801D1D24A393A900CAC60D /* LaunchScreen.storyboard */,
@@ -126,6 +140,21 @@
 				FF801D3624A393A900CAC60D /* Info.plist */,
 			);
 			path = CuriosityUITests;
+			sourceTree = "<group>";
+		};
+		FF801D5424A3952000CAC60D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FF801D4224A393ED00CAC60D /* RegisterViewController.swift */,
+				FF801D4424A393F900CAC60D /* LogInViewController.swift */,
+				FF801D4624A3944400CAC60D /* QuestionsTableViewController.swift */,
+				FF801D4824A3947900CAC60D /* MyQuestionsTableViewController.swift */,
+				FF801D4A24A394B000CAC60D /* CategorySpecificTableViewController.swift */,
+				FF801D5024A394F000CAC60D /* CreateQuestionViewController.swift */,
+				FF801D5224A3950500CAC60D /* AnswerQuestionViewController.swift */,
+				FF801D5524A3954E00CAC60D /* HomeScreenViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,9 +288,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF801D1724A393A800CAC60D /* ViewController.swift in Sources */,
+				FF801D4724A3944400CAC60D /* QuestionsTableViewController.swift in Sources */,
+				FF801D5124A394F000CAC60D /* CreateQuestionViewController.swift in Sources */,
 				FF801D1324A393A800CAC60D /* AppDelegate.swift in Sources */,
 				FF801D1524A393A800CAC60D /* SceneDelegate.swift in Sources */,
+				FF801D4524A393F900CAC60D /* LogInViewController.swift in Sources */,
+				FF801D4924A3947900CAC60D /* MyQuestionsTableViewController.swift in Sources */,
+				FF801D4324A393ED00CAC60D /* RegisterViewController.swift in Sources */,
+				FF801D5324A3950500CAC60D /* AnswerQuestionViewController.swift in Sources */,
+				FF801D4B24A394B000CAC60D /* CategorySpecificTableViewController.swift in Sources */,
+				FF801D5624A3954E00CAC60D /* HomeScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
