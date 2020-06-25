@@ -23,9 +23,10 @@
 		FF801D4924A3947900CAC60D /* MyQuestionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF801D4824A3947900CAC60D /* MyQuestionsTableViewController.swift */; };
 		FF801D4B24A394B000CAC60D /* CategorySpecificTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF801D4A24A394B000CAC60D /* CategorySpecificTableViewController.swift */; };
 		FF801D5124A394F000CAC60D /* CreateQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF801D5024A394F000CAC60D /* CreateQuestionViewController.swift */; };
-		FF801D5324A3950500CAC60D /* AnswerQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF801D5224A3950500CAC60D /* AnswerQuestionViewController.swift */; };
 		FF801D5624A3954E00CAC60D /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF801D5524A3954E00CAC60D /* HomeScreenViewController.swift */; };
 		FF801D5924A4E4C800CAC60D /* TabMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF801D5824A4E4C800CAC60D /* TabMenuTableViewController.swift */; };
+		FF801D5B24A531BF00CAC60D /* AnswersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF801D5A24A531BF00CAC60D /* AnswersTableViewController.swift */; };
+		FF801D5D24A5321900CAC60D /* AnswerQuestionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF801D5C24A5321900CAC60D /* AnswerQuestionTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,9 +75,10 @@
 		FF801D4824A3947900CAC60D /* MyQuestionsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyQuestionsTableViewController.swift; sourceTree = "<group>"; };
 		FF801D4A24A394B000CAC60D /* CategorySpecificTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySpecificTableViewController.swift; sourceTree = "<group>"; };
 		FF801D5024A394F000CAC60D /* CreateQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateQuestionViewController.swift; sourceTree = "<group>"; };
-		FF801D5224A3950500CAC60D /* AnswerQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerQuestionViewController.swift; sourceTree = "<group>"; };
 		FF801D5524A3954E00CAC60D /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
 		FF801D5824A4E4C800CAC60D /* TabMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabMenuTableViewController.swift; sourceTree = "<group>"; };
+		FF801D5A24A531BF00CAC60D /* AnswersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswersTableViewController.swift; sourceTree = "<group>"; };
+		FF801D5C24A5321900CAC60D /* AnswerQuestionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerQuestionTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,8 +196,9 @@
 				FF801D4824A3947900CAC60D /* MyQuestionsTableViewController.swift */,
 				FF801D4A24A394B000CAC60D /* CategorySpecificTableViewController.swift */,
 				FF801D5024A394F000CAC60D /* CreateQuestionViewController.swift */,
-				FF801D5224A3950500CAC60D /* AnswerQuestionViewController.swift */,
 				FF801D5824A4E4C800CAC60D /* TabMenuTableViewController.swift */,
+				FF801D5A24A531BF00CAC60D /* AnswersTableViewController.swift */,
+				FF801D5C24A5321900CAC60D /* AnswerQuestionTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -449,13 +452,14 @@
 			files = (
 				FF801D5924A4E4C800CAC60D /* TabMenuTableViewController.swift in Sources */,
 				FF801D4724A3944400CAC60D /* QuestionsTableViewController.swift in Sources */,
+				FF801D5B24A531BF00CAC60D /* AnswersTableViewController.swift in Sources */,
 				FF801D5124A394F000CAC60D /* CreateQuestionViewController.swift in Sources */,
 				FF801D1324A393A800CAC60D /* AppDelegate.swift in Sources */,
 				FF801D1524A393A800CAC60D /* SceneDelegate.swift in Sources */,
 				FF801D4524A393F900CAC60D /* LogInViewController.swift in Sources */,
 				FF801D4924A3947900CAC60D /* MyQuestionsTableViewController.swift in Sources */,
 				FF801D4324A393ED00CAC60D /* RegisterViewController.swift in Sources */,
-				FF801D5324A3950500CAC60D /* AnswerQuestionViewController.swift in Sources */,
+				FF801D5D24A5321900CAC60D /* AnswerQuestionTableViewController.swift in Sources */,
 				FF801D4B24A394B000CAC60D /* CategorySpecificTableViewController.swift in Sources */,
 				FF801D5624A3954E00CAC60D /* HomeScreenViewController.swift in Sources */,
 			);

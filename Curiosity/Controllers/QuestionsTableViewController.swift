@@ -10,7 +10,7 @@ import UIKit
 
 class QuestionsTableViewController: UITableViewController {
 
-    private var lyst = ["1", "2"]
+    private var lyst = ["Python", "Swift", "Xcode", "Java", "Javascript", "HTML", "CSS", "SASS", "Objective C", "PHP", "SQL", "MYSQL", "SQLite", "Realm", "C", "C#", "C++", "Shell", "Typescript", "Go", "Ruby", "Lua", "R", "Perl", "Kotlin", "Rust", "Scala", "Elixir", "Haskell"]
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,7 +29,7 @@ class QuestionsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "question", for: indexPath)
         cell.textLabel!.text = lyst[indexPath.row]
-     
+        cell.accessoryType = .disclosureIndicator
         return cell
     }
     
