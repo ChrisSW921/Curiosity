@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+//import CLTypingLabel
 class HomeScreenViewController: UIViewController {
 
     override func viewDidLoad() {
