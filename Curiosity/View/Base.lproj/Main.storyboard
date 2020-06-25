@@ -254,6 +254,44 @@
             </objects>
             <point key="canvasLocation" x="3486.9565217391305" y="709.82142857142856"/>
         </scene>
+        <!--My Profile-->
+        <scene sceneID="ORN-kP-06U">
+            <objects>
+                <viewController id="QEf-Ro-Nn6" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="h72-bZ-D8b">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Points: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8oA-SU-LJn">
+                                <rect key="frame" x="20" y="140" width="92" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QSi-03-fu7">
+                                <rect key="frame" x="155" y="712" width="104" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Log Out"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Questions Answered: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K2C-Ef-B2l">
+                                <rect key="frame" x="20" y="229" width="272" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="916-6F-id5"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="My Profile" id="xcp-Ou-YCD"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6rX-Pm-gS4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4351" y="1477"/>
+        </scene>
         <!--My Questions-->
         <scene sceneID="MdA-at-FHA">
             <objects>
@@ -417,6 +455,7 @@
                     <connections>
                         <segue destination="tUa-cf-tw7" kind="relationship" relationship="viewControllers" id="F9t-5d-Ifj"/>
                         <segue destination="qJK-Qv-fOO" kind="relationship" relationship="viewControllers" id="Y8Q-2S-7SS"/>
+                        <segue destination="QEf-Ro-Nn6" kind="relationship" relationship="viewControllers" id="SCe-jK-U5G"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OH6-Rz-nFq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
