@@ -27,7 +27,7 @@ class QuestionsTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "question", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Category", for: indexPath)
         cell.textLabel!.text = lyst[indexPath.row]
         cell.accessoryType = .disclosureIndicator
         return cell
