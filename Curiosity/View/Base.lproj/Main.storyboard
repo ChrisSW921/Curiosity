@@ -452,10 +452,10 @@
             </objects>
             <point key="canvasLocation" x="6982" y="365"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Main Tab View Controller-->
         <scene sceneID="v9j-Mr-QNF">
             <objects>
-                <tabBarController id="8re-vi-TvP" sceneMemberID="viewController">
+                <tabBarController id="8re-vi-TvP" customClass="MainTabViewController" customModule="Curiosity" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="V2J-DU-tzA"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qRx-6s-hMo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>

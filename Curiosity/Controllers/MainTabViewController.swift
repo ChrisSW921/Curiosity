@@ -1,5 +1,5 @@
 //
-//  MyProfileViewController.swift
+//  MainTabViewController.swift
 //  Curiosity
 //
 //  Created by Chris Withers on 6/26/20.
@@ -7,26 +7,16 @@
 //
 
 import UIKit
-import Firebase
 
-class MyProfileViewController: UIViewController {
+class MainTabViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+        navigationItem.hidesBackButton = true
     }
     
 
-    @IBAction func logoutPressed(_ sender: UIButton) {
-        let firebaseAuth = Auth.auth()
-        do {
-          try firebaseAuth.signOut()
-          navigationController?.popToRootViewController(animated: true)
-        } catch let signOutError as NSError {
-          print ("Error signing out: %@", signOutError)
-        }
-        
-    }
     /*
     // MARK: - Navigation
 

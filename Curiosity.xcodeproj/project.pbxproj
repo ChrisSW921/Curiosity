@@ -30,6 +30,7 @@
 		FF801D5F24A53B8000CAC60D /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF801D5E24A53B8000CAC60D /* Question.swift */; };
 		FF801D6324A59D3700CAC60D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FF801D6224A59D3700CAC60D /* GoogleService-Info.plist */; };
 		FF801D6524A6338300CAC60D /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF801D6424A6338300CAC60D /* MyProfileViewController.swift */; };
+		FF801D6724A636FE00CAC60D /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF801D6624A636FE00CAC60D /* MainTabViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		FF801D5E24A53B8000CAC60D /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		FF801D6224A59D3700CAC60D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FF801D6424A6338300CAC60D /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
+		FF801D6624A636FE00CAC60D /* MainTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +210,7 @@
 				FF801D5A24A531BF00CAC60D /* AnswersTableViewController.swift */,
 				FF801D5C24A5321900CAC60D /* AnswerQuestionTableViewController.swift */,
 				FF801D6424A6338300CAC60D /* MyProfileViewController.swift */,
+				FF801D6624A636FE00CAC60D /* MainTabViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -473,6 +476,7 @@
 				FF801D6524A6338300CAC60D /* MyProfileViewController.swift in Sources */,
 				FF801D5B24A531BF00CAC60D /* AnswersTableViewController.swift in Sources */,
 				FF801D5124A394F000CAC60D /* CreateQuestionViewController.swift in Sources */,
+				FF801D6724A636FE00CAC60D /* MainTabViewController.swift in Sources */,
 				FF801D1324A393A800CAC60D /* AppDelegate.swift in Sources */,
 				FF801D1524A393A800CAC60D /* SceneDelegate.swift in Sources */,
 				FF801D4524A393F900CAC60D /* LogInViewController.swift in Sources */,
