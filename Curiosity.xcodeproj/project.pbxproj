@@ -28,6 +28,7 @@
 		FF801D5B24A531BF00CAC60D /* AnswersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF801D5A24A531BF00CAC60D /* AnswersTableViewController.swift */; };
 		FF801D5D24A5321900CAC60D /* AnswerQuestionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF801D5C24A5321900CAC60D /* AnswerQuestionTableViewController.swift */; };
 		FF801D5F24A53B8000CAC60D /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF801D5E24A53B8000CAC60D /* Question.swift */; };
+		FF801D6324A59D3700CAC60D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FF801D6224A59D3700CAC60D /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		FF801D5A24A531BF00CAC60D /* AnswersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswersTableViewController.swift; sourceTree = "<group>"; };
 		FF801D5C24A5321900CAC60D /* AnswerQuestionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerQuestionTableViewController.swift; sourceTree = "<group>"; };
 		FF801D5E24A53B8000CAC60D /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		FF801D6224A59D3700CAC60D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 		FF801D1124A393A800CAC60D /* Curiosity */ = {
 			isa = PBXGroup;
 			children = (
+				FF801D6224A59D3700CAC60D /* GoogleService-Info.plist */,
 				FF801D1224A393A800CAC60D /* AppDelegate.swift */,
 				FF801D1424A393A800CAC60D /* SceneDelegate.swift */,
 				FF801D5424A3952000CAC60D /* Controllers */,
@@ -332,6 +335,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF801D1F24A393A900CAC60D /* LaunchScreen.storyboard in Resources */,
+				FF801D6324A59D3700CAC60D /* GoogleService-Info.plist in Resources */,
 				FF801D1C24A393A900CAC60D /* Assets.xcassets in Resources */,
 				FF801D1A24A393A800CAC60D /* Main.storyboard in Resources */,
 			);

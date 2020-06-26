@@ -106,6 +106,7 @@
                                             <color key="titleColor" name="BrandBlue"/>
                                         </state>
                                         <connections>
+                                            <action selector="registerPressed:" destination="eT3-Gi-NEg" eventType="touchUpInside" id="MnJ-dM-moR"/>
                                             <segue destination="8re-vi-TvP" kind="show" id="87i-Dr-W4G"/>
                                         </connections>
                                     </button>
@@ -155,6 +156,11 @@
                         <viewLayoutGuide key="safeArea" id="cTO-gt-MoD"/>
                     </view>
                     <navigationItem key="navigationItem" id="Rm3-qz-oRL"/>
+                    <connections>
+                        <outlet property="emailTextfield" destination="C14-AX-LOu" id="qYP-Qh-pzH"/>
+                        <outlet property="errorLabel" destination="qYc-x4-3a3" id="8oq-v8-NWu"/>
+                        <outlet property="passwordTextfield" destination="e78-Oy-tTz" id="bp7-lF-iIy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z3U-J4-J0x" sceneMemberID="firstResponder"/>
             </objects>
