@@ -27,11 +27,11 @@ class RegisterViewController: UIViewController {
             Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
                 if let e = error {
                     self.errorLabel.text = e.localizedDescription
-                    print(e.localizedDescription)
+                    //print(e.localizedDescription)
                 } else{
                     //Navigate to chat view controller
-                    //self.performSegue(withIdentifier: K.registerSegue, sender: self)
-                    print("Ok")
+                    self.performSegue(withIdentifier: "RegisterComplete", sender: self)
+                    //print("Ok")
                 }
             }
         }

@@ -107,7 +107,6 @@
                                         </state>
                                         <connections>
                                             <action selector="registerPressed:" destination="eT3-Gi-NEg" eventType="touchUpInside" id="MnJ-dM-moR"/>
-                                            <segue destination="8re-vi-TvP" kind="show" id="87i-Dr-W4G"/>
                                         </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="textfield" translatesAutoresizingMaskIntoConstraints="NO" id="BQn-af-bAF">
@@ -160,11 +159,12 @@
                         <outlet property="emailTextfield" destination="C14-AX-LOu" id="qYP-Qh-pzH"/>
                         <outlet property="errorLabel" destination="qYc-x4-3a3" id="8oq-v8-NWu"/>
                         <outlet property="passwordTextfield" destination="e78-Oy-tTz" id="bp7-lF-iIy"/>
+                        <segue destination="8re-vi-TvP" kind="show" identifier="RegisterComplete" id="tKf-wm-943"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z3U-J4-J0x" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3510.144927536232" y="-317.41071428571428"/>
+            <point key="canvasLocation" x="3510" y="-308"/>
         </scene>
         <!--Log In View Controller-->
         <scene sceneID="IzC-UV-SEo">
@@ -218,7 +218,7 @@
                                             <color key="titleColor" name="BrandLightBlue"/>
                                         </state>
                                         <connections>
-                                            <segue destination="8re-vi-TvP" kind="show" id="VRE-mc-oVH"/>
+                                            <action selector="logInPressed:" destination="Cmp-ZF-cFi" eventType="touchUpInside" id="RY5-hg-Tok"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -252,8 +252,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="nda-hu-6uK"/>
                     <connections>
-                        <outlet property="emailTextfield" destination="3bQ-zC-eDj" id="2cn-GW-H6l"/>
-                        <outlet property="passwordTextfield" destination="52E-HP-Tlv" id="jMg-PA-ElI"/>
+                        <outlet property="emailTextfield" destination="3bQ-zC-eDj" id="dVS-X3-zWi"/>
+                        <outlet property="passwordTextfield" destination="52E-HP-Tlv" id="FZa-Iz-zqj"/>
+                        <segue destination="8re-vi-TvP" kind="show" identifier="Login" id="JPE-bG-I0O"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QvE-wG-Or0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -488,7 +489,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="87i-Dr-W4G"/>
+        <segue reference="JPE-bG-I0O"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="textfield" width="298" height="93"/>
