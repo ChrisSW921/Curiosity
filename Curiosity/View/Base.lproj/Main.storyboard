@@ -264,7 +264,7 @@
         <!--My Profile-->
         <scene sceneID="ORN-kP-06U">
             <objects>
-                <viewController id="QEf-Ro-Nn6" sceneMemberID="viewController">
+                <viewController id="QEf-Ro-Nn6" customClass="MyProfileViewController" customModule="Curiosity" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="h72-bZ-D8b">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -281,6 +281,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Log Out"/>
+                                <connections>
+                                    <action selector="logoutPressed:" destination="QEf-Ro-Nn6" eventType="touchUpInside" id="iiH-mr-umZ"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Questions Answered: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K2C-Ef-B2l">
                                 <rect key="frame" x="20" y="229" width="272" height="35"/>
