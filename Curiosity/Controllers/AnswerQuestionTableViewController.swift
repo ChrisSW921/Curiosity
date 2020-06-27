@@ -7,11 +7,19 @@
 //
 
 import UIKit
+import Firebase
 
 class AnswerQuestionTableViewController: UITableViewController {
+    
+    var firstCell = ""
+    
+    var answers: [String] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        var questionToAnswer = "Question: \(firstCell)"
+        answers.append(questionToAnswer)
+        print(answers)
 
     }
 
@@ -31,5 +39,6 @@ class AnswerQuestionTableViewController: UITableViewController {
 
         return cell
     }
+    
     
 }

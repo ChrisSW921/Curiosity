@@ -16,6 +16,8 @@ class CategorySpecificTableViewController: UITableViewController {
     var category = ""
     
     let db = Firestore.firestore()
+    
+    var currentCell: Int = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -95,6 +97,17 @@ class CategorySpecificTableViewController: UITableViewController {
         cell.textLabel!.text = questions[indexPath.row].question
 
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        currentCell = indexPath.row
+        self.performSegue(withIdentifier: "goToAnswers", sender: self)
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationVC = segue.destination as! AnswerQuestionTableViewController
+        destinationVC.firstCell = questions[currentCell].question
     }
     
     

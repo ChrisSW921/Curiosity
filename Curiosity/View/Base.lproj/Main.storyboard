@@ -403,9 +403,6 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="hJa-nW-tDb" kind="show" id="B5U-hs-YI6"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -420,6 +417,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="hJa-nW-tDb" kind="show" identifier="goToAnswers" id="PSH-Xb-f4H"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="puC-wY-4rA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
