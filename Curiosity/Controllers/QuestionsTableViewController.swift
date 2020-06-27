@@ -9,6 +9,8 @@
 import UIKit
 
 class QuestionsTableViewController: UITableViewController {
+    
+    var selectedCategory: String?
 
     private var lyst = ["Python", "Swift", "Xcode", "Java", "Javascript", "HTML", "CSS", "SASS", "Objective C", "PHP", "SQL", "MYSQL", "SQLite", "Realm", "C", "C#", "C++", "Shell", "Typescript", "Go", "Ruby", "Lua", "R", "Perl", "Kotlin", "Rust", "Scala", "Elixir", "Haskell"]
     override func viewDidLoad() {
@@ -32,6 +34,17 @@ class QuestionsTableViewController: UITableViewController {
         cell.textLabel!.text = lyst[indexPath.row]
         cell.accessoryType = .disclosureIndicator
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "CategorySpecific", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationVC = segue.destination as! CategorySpecificTableViewController
+        if let indexPath = tableView.indexPathForSelectedRow {
+        destinationVC.category = lyst[indexPath.row]
+        }
     }
     
 

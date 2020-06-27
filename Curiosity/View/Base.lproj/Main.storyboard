@@ -375,13 +375,13 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="aU3-wO-NyU" kind="show" id="flE-hZ-wA0"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Categories" id="88z-1U-Lfi"/>
+                    <connections>
+                        <segue destination="aU3-wO-NyU" kind="show" identifier="CategorySpecific" id="jGr-mC-LJl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m3J-YY-ZmA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -414,7 +414,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="vas-AR-mKu">
-                        <barButtonItem key="rightBarButtonItem" title="ADD QUESTION" id="pKa-zI-Xhe"/>
+                        <barButtonItem key="rightBarButtonItem" title="ADD QUESTION" id="pKa-zI-Xhe">
+                            <connections>
+                                <action selector="addButtonPressed:" destination="aU3-wO-NyU" id="iGu-W5-OER"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="puC-wY-4rA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
