@@ -7,15 +7,48 @@
 //
 
 import UIKit
+import Firebase
 
 class MyQuestionsTableViewController: UITableViewController {
     
-    var questions = ["How to find index of item", "How to find vertex in graph"]
+    var questions: [Question] = []
+    
+    let db = Firestore.firestore()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        loadQuestions()
        
+    }
+    
+    func loadQuestions() {
+    db.collection("Questions")
+            .addSnapshotListener { (querySnapshot, error) in
+            self.questions = []
+            if let e = error {
+                print("There was an issue retrieving data from firestore. \(e)")
+            }else {
+                if let snapshotDocuments = querySnapshot?.documents {
+                    for doc in snapshotDocuments {
+                        let data = doc.data()
+                        if let questionText = data["Question"] as? String, let categoryOfQ = data["Category"] as? String, let user = data["User"] as? String, let correctAnswer = data["Correct Answer"] as? Bool {
+                            var newQuestion = Question()
+                            newQuestion.category = categoryOfQ
+                            newQuestion.correctAnswer = correctAnswer
+                            newQuestion.question = questionText
+                            newQuestion.user = user
+                            if user == Auth.auth().currentUser?.email {
+                                self.questions.append(newQuestion)
+                            }
+                            DispatchQueue.main.async {
+                                self.tableView.reloadData()
+                            }
+                            
+                        }
+                    }
+                }
+            }
+        }
     }
 
     // MARK: - Table view data source
@@ -30,7 +63,7 @@ class MyQuestionsTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MyQuestions", for: indexPath)
 
         cell.textLabel!.numberOfLines = 0
-        cell.textLabel!.text = questions[indexPath.row]
+        cell.textLabel!.text = questions[indexPath.row].question
 
         return cell
     }
