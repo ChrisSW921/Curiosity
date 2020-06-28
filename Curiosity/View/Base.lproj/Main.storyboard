@@ -318,17 +318,17 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="Jr5-9h-pg4" kind="show" id="UaB-my-Bof"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="My Questions" id="0r2-lp-T2q"/>
+                    <connections>
+                        <segue destination="Jr5-9h-pg4" kind="show" identifier="goToMyAnswers" id="Ioa-HK-HaY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XNz-YQ-yCM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5271" y="1019"/>
+            <point key="canvasLocation" x="5270" y="1030"/>
         </scene>
         <!--Tap to select, slide to delete-->
         <scene sceneID="T7l-Rj-Y9x">
@@ -357,7 +357,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QD5-Pe-LtU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6145" y="1019"/>
+            <point key="canvasLocation" x="6145" y="1030"/>
         </scene>
         <!--Questions-->
         <scene sceneID="G7v-FC-xzt">

@@ -65,7 +65,7 @@ class CategorySpecificTableViewController: UITableViewController {
                                 newQuestion.correctAnswer = correctAnswer
                                 newQuestion.question = questionText
                                 newQuestion.user = user
-                                if categoryOfQ == self.category {
+                                if categoryOfQ == self.category && user != Auth.auth().currentUser?.email {
                                     self.questions.append(newQuestion)
                                 }
                                 DispatchQueue.main.async {

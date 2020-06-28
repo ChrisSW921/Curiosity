@@ -14,6 +14,8 @@ class MyQuestionsTableViewController: UITableViewController {
     var questions: [Question] = []
     
     let db = Firestore.firestore()
+    
+    var currentSelectedQuestion = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,5 +70,14 @@ class MyQuestionsTableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        currentSelectedQuestion = questions[indexPath.row].question
+        performSegue(withIdentifier: "goToMyAnswers", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationVC = segue.destination as! AnswersTableViewController
+        destinationVC.currentQuestion = currentSelectedQuestion
+    }
 
 }

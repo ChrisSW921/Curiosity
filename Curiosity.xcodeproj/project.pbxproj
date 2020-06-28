@@ -206,8 +206,8 @@
 				FF801D4824A3947900CAC60D /* MyQuestionsTableViewController.swift */,
 				FF801D4A24A394B000CAC60D /* CategorySpecificTableViewController.swift */,
 				FF801D5C24A5321900CAC60D /* AnswerQuestionTableViewController.swift */,
-				FF801D5024A394F000CAC60D /* CreateQuestionViewController.swift */,
 				FF801D5A24A531BF00CAC60D /* AnswersTableViewController.swift */,
+				FF801D5024A394F000CAC60D /* CreateQuestionViewController.swift */,
 				FF801D6424A6338300CAC60D /* MyProfileViewController.swift */,
 				FF801D6624A636FE00CAC60D /* MainTabViewController.swift */,
 			);
