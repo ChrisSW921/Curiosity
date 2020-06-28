@@ -74,7 +74,7 @@ class AnswerQuestionTableViewController: UITableViewController {
             var textField = UITextField()
             let alert = UIAlertController(title: "Add a New Answer", message: "", preferredStyle: .alert)
             let action = UIAlertAction(title: "Add", style: .default) { (action) in
-                self.db.collection("Answers").addDocument(data: ["Answer": textField.text!, "Question": self.firstCell, "User": Auth.auth().currentUser?.email, "Correct Answer": false])
+                self.db.collection("Answers").document(textField.text!).setData(["Answer": textField.text!, "Question": self.firstCell, "User": Auth.auth().currentUser?.email, "Correct Answer": false])
                 self.tableView.reloadData()
             }
             

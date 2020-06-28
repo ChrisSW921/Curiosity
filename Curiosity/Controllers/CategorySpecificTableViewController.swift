@@ -29,7 +29,7 @@ class CategorySpecificTableViewController: UITableViewController {
         var textField = UITextField()
         let alert = UIAlertController(title: "Add a New Question", message: "", preferredStyle: .alert)
         let action = UIAlertAction(title: "Add", style: .default) { (action) in
-            self.db.collection("Questions").addDocument(data: ["Question": textField.text!, "Category": self.category, "User": Auth.auth().currentUser?.email])
+            self.db.collection("Questions").document(textField.text!).setData(["Question": textField.text!, "Category": self.category, "User": Auth.auth().currentUser?.email])
             self.tableView.reloadData()
         }
         
