@@ -15,6 +15,8 @@ class AnswerQuestionTableViewController: UITableViewController {
     
     var Answers: [Answer] = []
     
+    var alreadyAnswered: [String] = []
+    
     let db = Firestore.firestore()
 
     
@@ -61,23 +63,31 @@ class AnswerQuestionTableViewController: UITableViewController {
     }
     
     @IBAction func addAnswer(_ sender: UIBarButtonItem) {
-        
-        var textField = UITextField()
-        let alert = UIAlertController(title: "Add a New Answer", message: "", preferredStyle: .alert)
-        let action = UIAlertAction(title: "Add", style: .default) { (action) in
-            self.db.collection("Answers").addDocument(data: ["Answer": textField.text!, "Question": self.firstCell, "User": Auth.auth().currentUser?.email, "Correct Answer": false])
-            self.tableView.reloadData()
+        for item in Answers {
+            if item.user == Auth.auth().currentUser?.email {
+                alreadyAnswered.append("Not new!")
+            }
         }
-        
-        alert.addAction(action)
-        alert.addTextField { (field) in
-            textField = field
-            textField.placeholder = "Add a new Answer"
+        if alreadyAnswered.count == 0 {
+            var textField = UITextField()
+            let alert = UIAlertController(title: "Add a New Answer", message: "", preferredStyle: .alert)
+            let action = UIAlertAction(title: "Add", style: .default) { (action) in
+                self.db.collection("Answers").addDocument(data: ["Answer": textField.text!, "Question": self.firstCell, "User": Auth.auth().currentUser?.email, "Correct Answer": false])
+                self.tableView.reloadData()
+            }
+            
+            alert.addAction(action)
+            alert.addTextField { (field) in
+                textField = field
+                textField.placeholder = "Add a new Answer"
+            }
+            
+            
+            present(alert, animated: true, completion:{
+            alert.view.superview?.isUserInteractionEnabled = true
+            alert.view.superview?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.dismissOnTapOutside)))
+            })
         }
-        present(alert, animated: true, completion:{
-        alert.view.superview?.isUserInteractionEnabled = true
-        alert.view.superview?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.dismissOnTapOutside)))
-        })
         
     }
     
