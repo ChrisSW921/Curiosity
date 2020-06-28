@@ -13,6 +13,8 @@ class AnswerQuestionTableViewController: UITableViewController {
     
     var firstCell = ""
     
+    var userWhoAsked = ""
+    
     var Answers: [Answer] = []
     
     var alreadyAnswered: [String] = []
@@ -68,7 +70,7 @@ class AnswerQuestionTableViewController: UITableViewController {
                 alreadyAnswered.append("Not new!")
             }
         }
-        if alreadyAnswered.count == 0 {
+        if alreadyAnswered.count == 0 && userWhoAsked != Auth.auth().currentUser?.email {
             var textField = UITextField()
             let alert = UIAlertController(title: "Add a New Answer", message: "", preferredStyle: .alert)
             let action = UIAlertAction(title: "Add", style: .default) { (action) in

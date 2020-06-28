@@ -65,7 +65,7 @@ class CategorySpecificTableViewController: UITableViewController {
                                 newQuestion.correctAnswer = correctAnswer
                                 newQuestion.question = questionText
                                 newQuestion.user = user
-                                if categoryOfQ == self.category && user != Auth.auth().currentUser?.email {
+                                if categoryOfQ == self.category {
                                     self.questions.append(newQuestion)
                                 }
                                 DispatchQueue.main.async {
@@ -104,6 +104,7 @@ class CategorySpecificTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destinationVC = segue.destination as! AnswerQuestionTableViewController
         destinationVC.firstCell = questions[currentCell].question
+        destinationVC.userWhoAsked = questions[currentCell].user
     }
     
     
