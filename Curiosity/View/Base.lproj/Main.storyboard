@@ -449,7 +449,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="Bg8-oL-cdv">
-                        <barButtonItem key="rightBarButtonItem" title="ADD ANSWER" id="lDe-TA-jWh"/>
+                        <barButtonItem key="rightBarButtonItem" title="ADD ANSWER" id="lDe-TA-jWh">
+                            <connections>
+                                <action selector="addAnswer:" destination="hJa-nW-tDb" id="X3K-Rp-eWo"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G83-oH-Hib" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
