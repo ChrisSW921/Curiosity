@@ -29,7 +29,7 @@ class CategorySpecificTableViewController: UITableViewController {
         var textField = UITextField()
         let alert = UIAlertController(title: "Add a New Question", message: "", preferredStyle: .alert)
         let action = UIAlertAction(title: "Add", style: .default) { (action) in
-            self.db.collection("Questions").addDocument(data: ["Question": textField.text!, "Category": self.category, "User": Auth.auth().currentUser?.email, "Correct Answer": false])
+            self.db.collection("Questions").addDocument(data: ["Question": textField.text!, "Category": self.category, "User": Auth.auth().currentUser?.email])
             self.tableView.reloadData()
         }
         
@@ -59,10 +59,9 @@ class CategorySpecificTableViewController: UITableViewController {
                     if let snapshotDocuments = querySnapshot?.documents {
                         for doc in snapshotDocuments {
                             let data = doc.data()
-                            if let questionText = data["Question"] as? String, let categoryOfQ = data["Category"] as? String, let user = data["User"] as? String, let correctAnswer = data["Correct Answer"] as? Bool {
+                            if let questionText = data["Question"] as? String, let categoryOfQ = data["Category"] as? String, let user = data["User"] as? String {
                                 var newQuestion = Question()
                                 newQuestion.category = categoryOfQ
-                                newQuestion.correctAnswer = correctAnswer
                                 newQuestion.question = questionText
                                 newQuestion.user = user
                                 if categoryOfQ == self.category {
@@ -73,6 +72,7 @@ class CategorySpecificTableViewController: UITableViewController {
                                 }
                                 
                             }
+                        
                         }
                     }
                 }

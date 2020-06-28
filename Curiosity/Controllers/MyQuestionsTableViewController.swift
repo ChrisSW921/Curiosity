@@ -33,10 +33,9 @@ class MyQuestionsTableViewController: UITableViewController {
                 if let snapshotDocuments = querySnapshot?.documents {
                     for doc in snapshotDocuments {
                         let data = doc.data()
-                        if let questionText = data["Question"] as? String, let categoryOfQ = data["Category"] as? String, let user = data["User"] as? String, let correctAnswer = data["Correct Answer"] as? Bool {
+                        if let questionText = data["Question"] as? String, let categoryOfQ = data["Category"] as? String, let user = data["User"] as? String {
                             var newQuestion = Question()
                             newQuestion.category = categoryOfQ
-                            newQuestion.correctAnswer = correctAnswer
                             newQuestion.question = questionText
                             newQuestion.user = user
                             if user == Auth.auth().currentUser?.email {

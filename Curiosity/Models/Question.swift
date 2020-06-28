@@ -10,7 +10,5 @@ import Foundation
 struct Question {
     var category: String = ""
     var question: String = ""
-    //var answers: [String] = ["-----------------------"]
     var user: String = ""
-    var correctAnswer: Bool = false
 }
