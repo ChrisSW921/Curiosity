@@ -347,6 +347,7 @@
                     <tabBarItem key="tabBarItem" title="My Profile" id="xcp-Ou-YCD"/>
                     <connections>
                         <outlet property="myAnswers" destination="Gs0-mW-ayU" id="Zqn-xB-vHR"/>
+                        <outlet property="points" destination="AOh-Lc-MLS" id="kuA-Ji-jKZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6rX-Pm-gS4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
