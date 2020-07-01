@@ -26,19 +26,19 @@ class AnswerQuestionTableViewController: UITableViewController {
     
     
     @IBAction func addAnswer(_ sender: UIBarButtonItem) {
-        for item in currentQuestion.answers {
+        for item in currentQuestion.usersWhoAnswered {
             if item == Auth.auth().currentUser?.email {
                 alreadyAnswered.append("I've answered")
             }
         }
-        if alreadyAnswered.count == 0 && currentQuestion.user != Auth.auth().currentUser?.email {
+        if alreadyAnswered.count == 0 && Auth.auth().currentUser?.email != currentQuestion.user {
             var textField = UITextField()
             let alert = UIAlertController(title: "Add a New Answer", message: "", preferredStyle: .alert)
             let action = UIAlertAction(title: "Add", style: .default) { (action) in
                 
-                self.db.collection("Answers").document(self.currentQuestion.question).updateData(["Answers": FieldValue.arrayUnion([textField.text!])])
-                self.db.collection("Answers").document(self.currentQuestion.question).updateData(["usersWhoAnswered": FieldValue.arrayUnion([Auth.auth().currentUser?.email])])
-                self.db.collection("Answers").document(self.currentQuestion.question).updateData(["correctAnswer": FieldValue.arrayUnion(["False"])])
+                self.db.collection("Questions").document(self.currentQuestion.question).updateData(["Answers": FieldValue.arrayUnion([textField.text!])])
+                self.db.collection("Questions").document(self.currentQuestion.question).updateData(["usersWhoAnswered": FieldValue.arrayUnion([Auth.auth().currentUser?.email])])
+                self.db.collection("Questions").document(self.currentQuestion.question).updateData(["CorrectAnswer": FieldValue.arrayUnion(["F \(Auth.auth().currentUser!.email ?? "Nobody")"])])
                 
                 self.currentQuestion.answers.append(textField.text!)
                 self.currentQuestion.correctAnswer.append("False")
