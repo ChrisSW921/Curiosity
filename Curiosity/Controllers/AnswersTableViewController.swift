@@ -35,17 +35,11 @@ class AnswersTableViewController: UITableViewController {
         for x in currentQuestion.correctAnswer{
             if currentQuestion.correctAnswer.firstIndex(of: x) == indexPath.row {
                 if x.prefix(1) == "F"{
-                    print("first one activated")
-                    print(x)
                     newAnswers.append("T \(currentQuestion.usersWhoAnswered[indexPath.row])")
                 }else {
-                    print("Second one activated")
-                    print(x)
                     newAnswers.append("F \(currentQuestion.usersWhoAnswered[indexPath.row])")
                 }
             }else {
-                print("None activated")
-                print(x)
                 newAnswers.append(x)
             }
         }
