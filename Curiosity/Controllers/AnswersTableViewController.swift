@@ -45,6 +45,7 @@ class AnswersTableViewController: UITableViewController {
         }
         currentQuestion.correctAnswer = newAnswers
         db.collection("Questions").document(currentQuestion.question).updateData(["CorrectAnswer": newAnswers])
+        tableView.reloadData()
     }
 
 
@@ -53,6 +54,7 @@ class AnswersTableViewController: UITableViewController {
 
         cell.textLabel!.numberOfLines = 0
         cell.textLabel!.text = currentQuestion.answers[indexPath.row]
+        cell.accessoryType = currentQuestion.correctAnswer[indexPath.row].prefix(1) == "T" ? .checkmark : .none
 
         return cell
     }
