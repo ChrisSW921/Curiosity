@@ -11,4 +11,7 @@ struct Question {
     var category: String = ""
     var question: String = ""
     var user: String = ""
+    var answers: [String] = []
+    var usersWhoAnswered: [String] = []
+    var correctAnswer: [String] = []
 }

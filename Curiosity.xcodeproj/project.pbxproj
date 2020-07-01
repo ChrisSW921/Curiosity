@@ -30,7 +30,6 @@
 		FF801D6324A59D3700CAC60D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FF801D6224A59D3700CAC60D /* GoogleService-Info.plist */; };
 		FF801D6524A6338300CAC60D /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF801D6424A6338300CAC60D /* MyProfileViewController.swift */; };
 		FF801D6724A636FE00CAC60D /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF801D6624A636FE00CAC60D /* MainTabViewController.swift */; };
-		FFCB8AB424A8188E0028C74D /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCB8AB324A8188E0028C74D /* Answer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,7 +85,6 @@
 		FF801D6224A59D3700CAC60D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FF801D6424A6338300CAC60D /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
 		FF801D6624A636FE00CAC60D /* MainTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
-		FFCB8AB324A8188E0028C74D /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,17 +197,17 @@
 		FF801D5424A3952000CAC60D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				FF801D6624A636FE00CAC60D /* MainTabViewController.swift */,
+				FF801D5024A394F000CAC60D /* CreateQuestionViewController.swift */,
+				FF801D5524A3954E00CAC60D /* HomeScreenViewController.swift */,
 				FF801D4224A393ED00CAC60D /* RegisterViewController.swift */,
 				FF801D4424A393F900CAC60D /* LogInViewController.swift */,
-				FF801D5524A3954E00CAC60D /* HomeScreenViewController.swift */,
 				FF801D4624A3944400CAC60D /* QuestionsTableViewController.swift */,
-				FF801D4824A3947900CAC60D /* MyQuestionsTableViewController.swift */,
 				FF801D4A24A394B000CAC60D /* CategorySpecificTableViewController.swift */,
 				FF801D5C24A5321900CAC60D /* AnswerQuestionTableViewController.swift */,
+				FF801D4824A3947900CAC60D /* MyQuestionsTableViewController.swift */,
 				FF801D5A24A531BF00CAC60D /* AnswersTableViewController.swift */,
-				FF801D5024A394F000CAC60D /* CreateQuestionViewController.swift */,
 				FF801D6424A6338300CAC60D /* MyProfileViewController.swift */,
-				FF801D6624A636FE00CAC60D /* MainTabViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -226,7 +224,6 @@
 			isa = PBXGroup;
 			children = (
 				FF801D5E24A53B8000CAC60D /* Question.swift */,
-				FFCB8AB324A8188E0028C74D /* Answer.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -483,7 +480,6 @@
 				FF801D5F24A53B8000CAC60D /* Question.swift in Sources */,
 				FF801D4324A393ED00CAC60D /* RegisterViewController.swift in Sources */,
 				FF801D5D24A5321900CAC60D /* AnswerQuestionTableViewController.swift in Sources */,
-				FFCB8AB424A8188E0028C74D /* Answer.swift in Sources */,
 				FF801D4B24A394B000CAC60D /* CategorySpecificTableViewController.swift in Sources */,
 				FF801D5624A3954E00CAC60D /* HomeScreenViewController.swift in Sources */,
 			);

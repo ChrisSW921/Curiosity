@@ -29,7 +29,7 @@ class CategorySpecificTableViewController: UITableViewController {
         var textField = UITextField()
         let alert = UIAlertController(title: "Add a New Question", message: "", preferredStyle: .alert)
         let action = UIAlertAction(title: "Add", style: .default) { (action) in
-            self.db.collection("Questions").document(textField.text!).setData(["Question": textField.text!, "Category": self.category, "User": Auth.auth().currentUser?.email])
+            self.db.collection("Questions").document(textField.text!).setData(["Question": textField.text!, "Category": self.category, "User": Auth.auth().currentUser?.email, "Answers": ["Test"], "usersWhoAnswered": ["Test"], "CorrectAnswer": ["Test"]])
             self.tableView.reloadData()
         }
         
@@ -59,11 +59,14 @@ class CategorySpecificTableViewController: UITableViewController {
                     if let snapshotDocuments = querySnapshot?.documents {
                         for doc in snapshotDocuments {
                             let data = doc.data()
-                            if let questionText = data["Question"] as? String, let categoryOfQ = data["Category"] as? String, let user = data["User"] as? String {
+                            if let questionText = data["Question"] as? String, let categoryOfQ = data["Category"] as? String, let user = data["User"] as? String, let QsAnswers = data["Answers"] as? [String], let UsersWhoAnswered = data["usersWhoAnswered"] as? [String], let correctA = data["CorrectAnswer"] as? [String] {
                                 var newQuestion = Question()
                                 newQuestion.category = categoryOfQ
                                 newQuestion.question = questionText
                                 newQuestion.user = user
+                                newQuestion.answers = QsAnswers
+                                newQuestion.correctAnswer = correctA
+                                newQuestion.usersWhoAnswered = UsersWhoAnswered
                                 if categoryOfQ == self.category {
                                     self.questions.append(newQuestion)
                                 }
@@ -103,8 +106,7 @@ class CategorySpecificTableViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destinationVC = segue.destination as! AnswerQuestionTableViewController
-        destinationVC.firstCell = questions[currentCell].question
-        destinationVC.userWhoAsked = questions[currentCell].user
+        destinationVC.currentQuestion = questions[currentCell]
     }
     
     

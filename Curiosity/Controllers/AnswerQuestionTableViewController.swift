@@ -11,11 +11,7 @@ import Firebase
 
 class AnswerQuestionTableViewController: UITableViewController {
     
-    var firstCell = ""
-    
-    var userWhoAsked = ""
-    
-    var Answers: [Answer] = []
+    var currentQuestion = Question()
     
     var alreadyAnswered: [String] = []
     
@@ -25,58 +21,32 @@ class AnswerQuestionTableViewController: UITableViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        var questionToAnswer = Answer()
-        questionToAnswer.answer = "Q: \(firstCell)"
-        var divider = Answer()
-        divider.answer = "--------------------------------"
-        Answers.append(questionToAnswer)
-        Answers.append(divider)
-        loadQuestions()
         
     }
     
-    func loadQuestions() {
-    db.collection("Answers")
-            .addSnapshotListener { (querySnapshot, error) in
-            if let e = error {
-                print("There was an issue retrieving data from firestore. \(e)")
-            }else {
-                if let snapshotDocuments = querySnapshot?.documents {
-                    for doc in snapshotDocuments {
-                        let data = doc.data()
-                        if let answerText = data["Answer"] as? String, let question = data["Question"] as? String, let user = data["User"] as? String, let correctAnswer = data["Correct Answer"] as? Bool {
-                            var newAnswer = Answer()
-                            newAnswer.question = question
-                            newAnswer.correctAnswer = correctAnswer
-                            newAnswer.answer = "A: \(answerText)"
-                            newAnswer.user = user
-                            if question == self.firstCell {
-                                self.Answers.append(newAnswer)
-                            }
-                            DispatchQueue.main.async {
-                                self.tableView.reloadData()
-                            }
-                            
-                        }
-                    }
-                }
-            }
-        }
-    }
     
     @IBAction func addAnswer(_ sender: UIBarButtonItem) {
-        for item in Answers {
-            if item.user == Auth.auth().currentUser?.email {
-                alreadyAnswered.append("Not new!")
+        for item in currentQuestion.answers {
+            if item == Auth.auth().currentUser?.email {
+                alreadyAnswered.append("I've answered")
             }
         }
-        if alreadyAnswered.count == 0 && userWhoAsked != Auth.auth().currentUser?.email {
+        if alreadyAnswered.count == 0 && currentQuestion.user != Auth.auth().currentUser?.email {
             var textField = UITextField()
             let alert = UIAlertController(title: "Add a New Answer", message: "", preferredStyle: .alert)
             let action = UIAlertAction(title: "Add", style: .default) { (action) in
-                self.db.collection("Answers").document(textField.text!).setData(["Answer": textField.text!, "Question": self.firstCell, "User": Auth.auth().currentUser?.email, "Correct Answer": false])
+                
+                self.db.collection("Answers").document(self.currentQuestion.question).updateData(["Answers": FieldValue.arrayUnion([textField.text!])])
+                self.db.collection("Answers").document(self.currentQuestion.question).updateData(["usersWhoAnswered": FieldValue.arrayUnion([Auth.auth().currentUser?.email])])
+                self.db.collection("Answers").document(self.currentQuestion.question).updateData(["correctAnswer": FieldValue.arrayUnion(["False"])])
+                
+                self.currentQuestion.answers.append(textField.text!)
+                self.currentQuestion.correctAnswer.append("False")
+                self.currentQuestion.usersWhoAnswered.append((Auth.auth().currentUser?.email)!)
+                
                 self.tableView.reloadData()
             }
+        
             
             alert.addAction(action)
             alert.addTextField { (field) in
@@ -103,7 +73,7 @@ class AnswerQuestionTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return Answers.count
+        return currentQuestion.answers.count
     }
 
     
@@ -112,8 +82,8 @@ class AnswerQuestionTableViewController: UITableViewController {
 
         cell.textLabel!.numberOfLines = 0
         
-        cell.textLabel!.text = Answers[indexPath.row].answer
-
+        cell.textLabel!.text = currentQuestion.answers[indexPath.row]
+        
         return cell
     }
     
