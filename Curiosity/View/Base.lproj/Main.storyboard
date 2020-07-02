@@ -354,6 +354,68 @@
             </objects>
             <point key="canvasLocation" x="4351" y="1477"/>
         </scene>
+        <!--My Answers-->
+        <scene sceneID="dt5-3v-DAU">
+            <objects>
+                <tableViewController id="a4C-RJ-abZ" customClass="MyAnswersTableViewController" customModule="Curiosity" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="XEr-wK-RnM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="myQuestion" id="Trh-kT-Hb1">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Trh-kT-Hb1" id="QS9-0w-sOd">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="a4C-RJ-abZ" id="tUP-nS-tUx"/>
+                            <outlet property="delegate" destination="a4C-RJ-abZ" id="z66-Dj-NBm"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="My Answers" id="cV7-Ko-CH8"/>
+                    <navigationItem key="navigationItem" id="ONJ-tx-qqC"/>
+                    <connections>
+                        <segue destination="8wy-Fi-ORZ" kind="show" identifier="goToMyAnswers" id="ikg-U1-6xH"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nsm-pM-rNj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2396" y="1477"/>
+        </scene>
+        <!--My Responses Table View Controller-->
+        <scene sceneID="9cn-p0-OOH">
+            <objects>
+                <tableViewController id="8wy-Fi-ORZ" customClass="MyResponsesTableViewController" customModule="Curiosity" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="4KX-QI-IJ2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="myResponses" id="UGc-2V-rpq">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UGc-2V-rpq" id="WQH-VU-FjM">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="8wy-Fi-ORZ" id="7yW-n2-QsF"/>
+                            <outlet property="delegate" destination="8wy-Fi-ORZ" id="8Io-1c-zJn"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="YF0-Oi-F4j"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Imr-Oz-hQi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3201" y="1477"/>
+        </scene>
         <!--My Questions-->
         <scene sceneID="MdA-at-FHA">
             <objects>
@@ -526,11 +588,12 @@
                         <segue destination="tUa-cf-tw7" kind="relationship" relationship="viewControllers" id="F9t-5d-Ifj"/>
                         <segue destination="qJK-Qv-fOO" kind="relationship" relationship="viewControllers" id="Y8Q-2S-7SS"/>
                         <segue destination="QEf-Ro-Nn6" kind="relationship" relationship="viewControllers" id="SCe-jK-U5G"/>
+                        <segue destination="a4C-RJ-abZ" kind="relationship" relationship="viewControllers" id="3vs-Zm-t2x"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OH6-Rz-nFq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4351" y="695"/>
+            <point key="canvasLocation" x="4312" y="710"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="D27-0H-Y5D">
@@ -552,7 +615,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="tKf-wm-943"/>
+        <segue reference="JPE-bG-I0O"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="textfield" width="298" height="93"/>

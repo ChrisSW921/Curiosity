@@ -83,6 +83,7 @@ class AnswerQuestionTableViewController: UITableViewController {
         cell.textLabel!.numberOfLines = 0
         
         cell.textLabel!.text = currentQuestion.answers[indexPath.row]
+        cell.accessoryType = currentQuestion.correctAnswer[indexPath.row].prefix(1) == "T" ? .checkmark : .none
         
         return cell
     }
