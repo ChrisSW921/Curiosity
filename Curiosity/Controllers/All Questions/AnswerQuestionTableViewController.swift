@@ -37,7 +37,7 @@ class AnswerQuestionTableViewController: UITableViewController {
             let action = UIAlertAction(title: "Add", style: .default) { (action) in
                 
                 self.db.collection("Questions").document(self.currentQuestion.question).updateData(["Answers": FieldValue.arrayUnion([textField.text!])])
-                self.db.collection("Questions").document(self.currentQuestion.question).updateData(["usersWhoAnswered": FieldValue.arrayUnion([Auth.auth().currentUser?.email])])
+                self.db.collection("Questions").document(self.currentQuestion.question).updateData(["usersWhoAnswered": FieldValue.arrayUnion([Auth.auth().currentUser?.email ?? "Nobody"])])
                 self.db.collection("Questions").document(self.currentQuestion.question).updateData(["CorrectAnswer": FieldValue.arrayUnion(["F \(Auth.auth().currentUser!.email ?? "Nobody")"])])
                 
                 self.currentQuestion.answers.append(textField.text!)
