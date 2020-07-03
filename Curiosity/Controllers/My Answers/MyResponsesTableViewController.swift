@@ -29,9 +29,9 @@ class MyResponsesTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "myResponses", for: indexPath)
-
+        cell.textLabel!.numberOfLines = 0
         cell.accessoryType = currentQuestion.correctAnswer[indexPath.row].prefix(1) == "T" ? .checkmark : .none
-        cell.backgroundColor = currentQuestion.usersWhoAnswered[indexPath.row] == Auth.auth().currentUser?.email ? #colorLiteral(red: 0, green: 0.8104301691, blue: 1, alpha: 1) : #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        cell.backgroundColor = currentQuestion.usersWhoAnswered[indexPath.row] == Auth.auth().currentUser?.email  ? #colorLiteral(red: 0, green: 0.8104301691, blue: 1, alpha: 1) : #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         cell.textLabel!.text = currentQuestion.answers[indexPath.row]
 
         return cell

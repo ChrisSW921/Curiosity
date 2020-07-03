@@ -12,11 +12,13 @@ class QuestionsTableViewController: UITableViewController {
     
     var selectedCategory: String?
 
-    private var lyst = ["Python", "Swift", "Xcode", "Java", "Javascript", "HTML", "CSS", "SASS", "Objective C", "PHP", "SQL", "MYSQL", "SQLite", "Realm", "C", "C#", "C++", "Shell", "Typescript", "Go", "Ruby", "Lua", "R", "Perl", "Kotlin", "Rust", "Scala", "Elixir", "Haskell"]
+    private var lyst = ["Politics", "Food", "Lover", "Animals", "Work", "School", "Cars", "Technology", "Money", "Religion", "Family", "Friends", "Housing", "Sports", "Mental illness", "Physical illness", "Law", "Drugs", "Writing"]
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        lyst.sort()
 
     }
 

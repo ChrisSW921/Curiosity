@@ -68,6 +68,7 @@ class MyAnswersTableViewController: UITableViewController {
        
         let cell = tableView.dequeueReusableCell(withIdentifier: "myQuestion", for: indexPath)
         cell.accessoryType = .disclosureIndicator
+        cell.textLabel!.numberOfLines = 0
         cell.textLabel!.text = myQuestionsAnswered[indexPath.row].question
 
         return cell

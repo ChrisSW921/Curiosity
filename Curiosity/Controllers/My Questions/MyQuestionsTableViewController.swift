@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import SwipeCellKit
 
 class MyQuestionsTableViewController: UITableViewController {
 
@@ -64,11 +65,11 @@ class MyQuestionsTableViewController: UITableViewController {
 
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MyQuestions", for: indexPath)
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MyQuestions", for: indexPath) as! SwipeTableViewCell
         cell.textLabel!.numberOfLines = 0
+        cell.accessoryType = .disclosureIndicator
         cell.textLabel!.text = questions[indexPath.row].question
-
+        cell.delegate = self
         return cell
     }
 
@@ -82,4 +83,33 @@ class MyQuestionsTableViewController: UITableViewController {
         destinationVC.currentQuestion = currentSelectedQuestion
     }
 
+}
+
+extension MyQuestionsTableViewController: SwipeTableViewCellDelegate {
+func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> [SwipeAction]? {
+    guard orientation == .right else { return nil }
+    
+    let deleteAction = SwipeAction(style: .destructive, title: "Delete") { action, indexPath in
+        let qToRemove = self.questions[indexPath.row]
+        self.questions.remove(at: indexPath.row)
+        self.db.collection("Questions").document(qToRemove.question).delete() { err in
+            if let err = err {
+                print("Error removing document: \(err)")
+            } else {
+
+            }
+        }
+        
+    }
+
+    deleteAction.image = UIImage(named: "TrashImage")
+
+    return [deleteAction]
+}
+
+func tableView(_ tableView: UITableView, editActionsOptionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> SwipeOptions {
+    var options = SwipeOptions()
+    options.expansionStyle = .destructive
+    return options
+}
 }
