@@ -50,7 +50,7 @@ class AnswersTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MyQuestionsAnswers", for: indexPath)
-
+        cell.contentView.heightAnchor.constraint(greaterThanOrEqualToConstant: 80).isActive = true
         cell.textLabel!.numberOfLines = 0
         cell.textLabel!.text = currentQuestion.answers[indexPath.row]
         cell.accessoryType = currentQuestion.correctAnswer[indexPath.row].prefix(1) == "T" ? .checkmark : .none

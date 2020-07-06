@@ -45,10 +45,18 @@
                                     <segue destination="eT3-Gi-NEg" kind="show" id="n3y-6A-XF9"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CURIOSITY " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ham-15-onO">
+                                <rect key="frame" x="113.5" y="427" width="187.5" height="42"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="35"/>
+                                <color key="textColor" red="0.075286589560000006" green="0.79580777879999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="ham-15-onO" firstAttribute="centerX" secondItem="WY2-Sk-h8I" secondAttribute="centerX" id="IUv-Wb-wEM"/>
                             <constraint firstItem="EHf-NN-xQ5" firstAttribute="trailing" secondItem="uD8-F7-3Hh" secondAttribute="trailing" id="QdM-Cm-5rI"/>
+                            <constraint firstItem="ham-15-onO" firstAttribute="centerY" secondItem="WY2-Sk-h8I" secondAttribute="centerY" id="SRY-L1-MuP"/>
                             <constraint firstItem="EHf-NN-xQ5" firstAttribute="leading" secondItem="uD8-F7-3Hh" secondAttribute="leading" id="UO6-AL-F6u"/>
                             <constraint firstItem="gpG-7t-g0t" firstAttribute="leading" secondItem="uD8-F7-3Hh" secondAttribute="leading" id="a7J-gv-wdW"/>
                             <constraint firstItem="gpG-7t-g0t" firstAttribute="top" secondItem="EHf-NN-xQ5" secondAttribute="bottom" constant="8" id="fe1-wX-eT6"/>
@@ -379,7 +387,7 @@
             </objects>
             <point key="canvasLocation" x="2396" y="1477"/>
         </scene>
-        <!--My Responses Table View Controller-->
+        <!--Swipe to delete-->
         <scene sceneID="9cn-p0-OOH">
             <objects>
                 <tableViewController id="8wy-Fi-ORZ" customClass="MyResponsesTableViewController" customModule="Curiosity" customModuleProvider="target" sceneMemberID="viewController">
@@ -402,7 +410,7 @@
                             <outlet property="delegate" destination="8wy-Fi-ORZ" id="8Io-1c-zJn"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="YF0-Oi-F4j"/>
+                    <navigationItem key="navigationItem" title="Swipe to delete" id="YF0-Oi-F4j"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Imr-Oz-hQi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

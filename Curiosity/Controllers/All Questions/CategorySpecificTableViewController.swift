@@ -93,6 +93,7 @@ class CategorySpecificTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Question", for: indexPath)
         cell.textLabel!.numberOfLines = 0
         cell.textLabel!.text = questions[indexPath.row].question
+        cell.contentView.heightAnchor.constraint(greaterThanOrEqualToConstant: 80).isActive = true
 
         return cell
     }

@@ -54,7 +54,7 @@ func loadQuestions() {
                         }
                     
                     }
-                    self.myAnswers.text = "Questions I Answered: \(String(self.questions.count))"
+                    self.myAnswers.text = "Questions I've Answered: \(String(self.questions.count))"
                     
                     for item in self.questions {
                         for ans in item.correctAnswer{

@@ -80,7 +80,7 @@ class AnswerQuestionTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "QuestionsAnswers", for: indexPath)
 
         cell.textLabel!.numberOfLines = 0
-        
+        cell.contentView.heightAnchor.constraint(greaterThanOrEqualToConstant: 80).isActive = true
         cell.textLabel!.text = currentQuestion.answers[indexPath.row]
         cell.accessoryType = currentQuestion.correctAnswer[indexPath.row].prefix(1) == "T" ? .checkmark : .none
         
