@@ -70,3 +70,39 @@ MY QUESTIONS
 ![](Curiosity/Assets.xcassets/D6E28166-98A7-4DED-93BD-49426F7ED749.imageset/D6E28166-98A7-4DED-93BD-49426F7ED749.png)
 
 
+
+
+
+
+CHOOSING RIGHT ANSWER FROM PEOPLE WHO ANSWERED YOUR QUESTION
+
+
+
+
+
+![](Curiosity/Assets.xcassets/F26A3AEF-ADE4-4D72-AAB1-6BCF747FBE84_1_105_c.imageset/F26A3AEF-ADE4-4D72-AAB1-6BCF747FBE84_1_105_c.jpeg)
+
+
+
+
+
+MY ANWERS MAIN PAGE (Shows what questions you answered)
+
+
+
+
+![](Curiosity/Assets.xcassets/1B892651-83BA-42F2-8C8D-49BD876F68A7_1_105_c.imageset/1B892651-83BA-42F2-8C8D-49BD876F68A7_1_105_c.jpeg)
+
+
+
+
+
+
+My ANSWERS TO SPECIFIC QUESTION (Your answer shows up in blue, and the correct answer will have a check mark)
+
+
+
+
+
+
+![](Curiosity/Assets.xcassets/58D3B0BC-D606-4CC1-A9D0-AECECDB78E03_1_105_c.imageset/58D3B0BC-D606-4CC1-A9D0-AECECDB78E03_1_105_c.jpeg)
