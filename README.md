@@ -106,3 +106,15 @@ My ANSWERS TO SPECIFIC QUESTION (Your answer shows up in blue, and the correct a
 
 
 ![](Curiosity/Assets.xcassets/58D3B0BC-D606-4CC1-A9D0-AECECDB78E03_1_105_c.imageset/58D3B0BC-D606-4CC1-A9D0-AECECDB78E03_1_105_c.jpeg)
+
+
+
+
+
+
+MY PROFILE
+
+
+
+
+![](Curiosity/Assets.xcassets/A3E45D04-20E6-49B7-9068-8DAED7A635CC.imageset/A3E45D04-20E6-49B7-9068-8DAED7A635CC.png)
