@@ -17,7 +17,10 @@ class QuestionsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.1411764706, green: 0.2862745098, blue: 0.368627451, alpha: 1)
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+        UITabBar.appearance().barTintColor = #colorLiteral(red: 0.1411764706, green: 0.2862745098, blue: 0.368627451, alpha: 1)
+        //self.navigationController?.navigationBar.isTranslucent = false
         lyst.sort()
 
     }
